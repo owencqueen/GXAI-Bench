@@ -1,4 +1,3 @@
-import math
 import copy
 
 import numpy as np
@@ -13,8 +12,8 @@ from typing import Union, Tuple
 from torch import Tensor
 from torch_geometric.typing import OptPairTensor, Adj, Size
 
-from graphxai.gnn_models.graph_classification import load_data, train, test
-from graphxai.explainers.graphmask import LagrangianOptimization, HardConcrete, \
+from gxai_eval.gnn_models.graph_classification import load_data, train, test
+from gxai_eval.explainers.graphmask import LagrangianOptimization, HardConcrete, \
     MultipleInputsLayernormLinear, Squeezer
 
 

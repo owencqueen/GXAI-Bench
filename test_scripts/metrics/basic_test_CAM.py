@@ -6,16 +6,16 @@ import matplotlib.pyplot as plt
 
 from torch_geometric.utils import to_networkx
 
-from graphxai.explainers import CAM, GradCAM
+from gxai_eval.explainers import CAM, GradCAM
 #from graphxai.explainers.utils.visualizations import visualize_subgraph_explanation
-from graphxai.visualization.visualizations import visualize_subgraph_explanation
-from graphxai.visualization.explanation_vis import visualize_node_explanation
-from graphxai.gnn_models.node_classification import GCN, train, test
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic
+from gxai_eval.visualization.visualizations import visualize_subgraph_explanation
+from gxai_eval.visualization.explanation_vis import visualize_node_explanation
+from gxai_eval.gnn_models.node_classification import GCN, train, test
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic
 #from graphxai.datasets import BAShapes
 from old.new_BAshapes import ShapeGraph
 
-from graphxai.utils import to_networkx_conv, Explanation
+from gxai_eval.utils import to_networkx_conv, Explanation
 
 def comp_gt(gt_exp: Explanation, generated_exp: Explanation) -> float:
     '''

@@ -1,9 +1,9 @@
 import os
 import torch
-from graphxai.explainers import *
+from gxai_eval.explainers import *
 
-from graphxai.datasets import Mutagenicity, Benzene, FluorideCarbonyl
-from graphxai.gnn_models.graph_classification import GIN_3layer, GCN_3layer, GAT_3layer, SAGE_3layer, JKNet_3layer
+from gxai_eval.datasets import Mutagenicity, Benzene, FluorideCarbonyl
+from gxai_eval.gnn_models.graph_classification import GIN_3layer, GCN_3layer, GAT_3layer, SAGE_3layer, JKNet_3layer
 
 def get_exp_method(method, model, criterion, pred_class, data, device, train_pg = False, emb_layer_name='conv3'):
     method = method.lower()

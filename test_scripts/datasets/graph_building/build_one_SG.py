@@ -3,8 +3,8 @@ import torch
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.datasets import load_ShapeGraph
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.datasets import load_ShapeGraph
 
 
 start_time = time.time()

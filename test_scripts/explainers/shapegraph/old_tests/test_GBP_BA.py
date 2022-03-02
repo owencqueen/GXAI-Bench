@@ -2,14 +2,14 @@ import random
 import torch
 import matplotlib.pyplot as plt
 
-from graphxai.explainers import GuidedBP
-from graphxai.explainers.utils.visualizations import visualize_subgraph_explanation
-from graphxai.gnn_models.node_classification import BA_Houses, train, test
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic
-from graphxai.datasets import BAHouses, BAShapes
-from graphxai.datasets.shape_graph import ShapeGraph
+from gxai_eval.explainers import GuidedBP
+from gxai_eval.explainers.utils.visualizations import visualize_subgraph_explanation
+from gxai_eval.gnn_models.node_classification import BA_Houses, train, test
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic
+from gxai_eval.datasets import BAHouses, BAShapes
+from gxai_eval.datasets.shape_graph import ShapeGraph
 
-from graphxai.visualization.explanation_vis import visualize_node_explanation
+from gxai_eval.visualization.explanation_vis import visualize_node_explanation
 
 # Set up dataset:
 bah = ShapeGraph(model_layers = 3)

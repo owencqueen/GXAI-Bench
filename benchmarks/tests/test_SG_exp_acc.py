@@ -2,12 +2,12 @@ import torch
 import matplotlib.pyplot as plt
 from tqdm import trange
 
-from graphxai.datasets import ShapeGraph
-from graphxai.explainers import GNNExplainer, GradExplainer
-from graphxai.metrics import graph_exp_acc, graph_exp_faith, graph_exp_stability
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, test, train 
+from gxai_eval.datasets import ShapeGraph
+from gxai_eval.explainers import GNNExplainer, GradExplainer
+from gxai_eval.metrics import graph_exp_acc, graph_exp_faith, graph_exp_stability
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, test, train 
 
-from graphxai.utils import correct_predictions
+from gxai_eval.utils import correct_predictions
 
 def experiment():
     SG = ShapeGraph(model_layers = 3, 

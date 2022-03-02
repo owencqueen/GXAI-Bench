@@ -1,6 +1,6 @@
 import torch
 from tqdm import trange
-from graphxai.datasets import Benzene, FluorideCarbonyl
+from gxai_eval.datasets import Benzene, FluorideCarbonyl
 
 dataset = FluorideCarbonyl(split_sizes = (0.8, 0.2, 0), seed = 1234)
 conf_matrix = torch.zeros((2, 2))

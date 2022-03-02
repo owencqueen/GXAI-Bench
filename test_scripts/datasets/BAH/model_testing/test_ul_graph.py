@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 from torch_geometric.utils import from_networkx
 from sklearn.model_selection import train_test_split
 
-from graphxai.datasets.utils.bound_graph import build_bound_graph
-from graphxai.gnn_models.node_classification.testing import *
-from graphxai.datasets import BAShapes
+from gxai_eval.datasets.utils.bound_graph import build_bound_graph
+from gxai_eval.gnn_models.node_classification.testing import *
+from gxai_eval.datasets import BAShapes
 
 class Hyperparameters:
     num_hops = 2

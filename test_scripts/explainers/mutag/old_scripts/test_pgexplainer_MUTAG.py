@@ -1,9 +1,9 @@
 import torch
 from torch_geometric.datasets import TUDataset
 
-from graphxai.explainers import PGExplainer
-from graphxai.explainers.utils.visualizations import visualize_mol_explanation
-from graphxai.gnn_models.graph_classification import GCN, load_data, train, test
+from gxai_eval.explainers import PGExplainer
+from gxai_eval.explainers.utils.visualizations import visualize_mol_explanation
+from gxai_eval.gnn_models.graph_classification import GCN, load_data, train, test
 
 
 dataset = TUDataset(root='data/TUDataset', name='MUTAG')

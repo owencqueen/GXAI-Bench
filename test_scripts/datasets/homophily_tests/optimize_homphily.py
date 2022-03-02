@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import torch.nn.functional as F
 from numpy import ndarray
 from torch_geometric.utils import to_networkx
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.utils import to_networkx_conv, Explanation, distance
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.utils import to_networkx_conv, Explanation, distance
 from tqdm import trange
 
 from test_homophily import homophily_test

@@ -5,10 +5,10 @@ import random as rand
 import numpy as np
 import torch
 from metrics import graph_exp_cf_fairness, graph_exp_group_fairness
-from graphxai.explainers import *
-from graphxai.datasets  import load_ShapeGraph
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.gnn_models.node_classification.testing import GIN_3layer_basic, GCN_3layer_basic, GSAGE_3layer
+from gxai_eval.explainers import *
+from gxai_eval.datasets  import load_ShapeGraph
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.gnn_models.node_classification.testing import GIN_3layer_basic, GCN_3layer_basic, GSAGE_3layer
 
 my_base_graphxai = '/home/owq978/GraphXAI'
 

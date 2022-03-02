@@ -1,9 +1,9 @@
 import random
 import torch
 
-from graphxai.explainers import GraphLIME
-from graphxai.explainers.utils.visualizations import visualize_subgraph_explanation
-from graphxai.gnn_models.node_classification import BA_Houses, GCN, train, test
+from gxai_eval.explainers import GraphLIME
+from gxai_eval.explainers.utils.visualizations import visualize_subgraph_explanation
+from gxai_eval.gnn_models.node_classification import BA_Houses, GCN, train, test
 
 
 n = 300

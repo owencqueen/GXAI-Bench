@@ -12,19 +12,19 @@ from numpy import ndarray
 from torch_geometric.utils import to_networkx, convert
 from torch_geometric.utils import sort_edge_index, to_undirected
 
-from graphxai.explainers import CAM, GradCAM, GNNExplainer
+from gxai_eval.explainers import CAM, GradCAM, GNNExplainer
 # from graphxai.explainers.utils.visualizations import visualize_subgraph_explanation
-from graphxai.visualization.visualizations import visualize_subgraph_explanation
-from graphxai.visualization.explanation_vis import visualize_node_explanation
-from graphxai.gnn_models.node_classification import GCN, train, test
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic
+from gxai_eval.visualization.visualizations import visualize_subgraph_explanation
+from gxai_eval.visualization.explanation_vis import visualize_node_explanation
+from gxai_eval.gnn_models.node_classification import GCN, train, test
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic
 
-from graphxai.gnn_models.node_classification import GCN, train, test
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, train, test
+from gxai_eval.gnn_models.node_classification import GCN, train, test
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, train, test
 
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.utils import to_networkx_conv, Explanation, distance
-from graphxai.utils.perturb import rewire_edges
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.utils import to_networkx_conv, Explanation, distance
+from gxai_eval.utils.perturb import rewire_edges
 
 
 def are_neighbors(edge_index, node1, node2):

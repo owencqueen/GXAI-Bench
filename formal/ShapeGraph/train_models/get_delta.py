@@ -4,7 +4,7 @@ import random as rand
 import torch
 from metrics import *
 import numpy as np
-from graphxai.gnn_models.node_classification.testing import GIN_3layer_basic, GCN_3layer_basic, GSAGE_3layer
+from gxai_eval.gnn_models.node_classification.testing import GIN_3layer_basic, GCN_3layer_basic, GSAGE_3layer
 
 # ----------------------------
 my_base_graphxai = '/home/owq978/GraphXAI'

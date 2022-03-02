@@ -4,10 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from torch_geometric.nn import GCNConv, GINConv, BatchNorm
 
-from graphxai.datasets.BA_shapes.ba_houses import BAHouses
+from gxai_eval.datasets.BA_shapes.ba_houses import BAHouses
 
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
-from graphxai.gnn_models.node_classification.testing import *
+from gxai_eval.gnn_models.node_classification.testing import *
 
 def labeling_rule_DEG(self):
     '''

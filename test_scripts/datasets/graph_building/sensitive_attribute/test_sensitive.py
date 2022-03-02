@@ -1,4 +1,4 @@
-from graphxai.datasets import ShapeGraph
+from gxai_eval.datasets import ShapeGraph
 
 SG = ShapeGraph(
     model_layers = 3,

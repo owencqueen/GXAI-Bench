@@ -3,8 +3,8 @@ import torch
 
 import numpy as np
 
-from graphxai.datasets import BAShapes
-from graphxai.gnn_models.node_classification.testing import *
+from gxai_eval.datasets import BAShapes
+from gxai_eval.gnn_models.node_classification.testing import *
 
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 

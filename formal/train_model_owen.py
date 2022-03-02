@@ -2,10 +2,10 @@ import ipdb
 import random
 import torch
 import argparse
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, test, train, val
-from graphxai.gnn_models.node_classification.testing import GIN_1layer, GIN_2layer
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.datasets  import load_ShapeGraph
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, test, train, val
+from gxai_eval.gnn_models.node_classification.testing import GIN_1layer, GIN_2layer
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.datasets  import load_ShapeGraph
 
 
 parser = argparse.ArgumentParser()

@@ -1,11 +1,11 @@
 import torch
 
-from graphxai.datasets import load_ShapeGraph
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.gnn_models.node_classification.testing import train, test
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, GCN_4layer_basic, GAT_3layer_basic
-from graphxai.gnn_models.node_classification.testing import GCN_2layer, GIN_2layer
-from graphxai.gnn_models.node_classification.testing import GSAGE_3layer, JKNet_3layer, JKNet_3layer_lstm
+from gxai_eval.datasets import load_ShapeGraph
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.gnn_models.node_classification.testing import train, test
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, GCN_4layer_basic, GAT_3layer_basic
+from gxai_eval.gnn_models.node_classification.testing import GCN_2layer, GIN_2layer
+from gxai_eval.gnn_models.node_classification.testing import GSAGE_3layer, JKNet_3layer, JKNet_3layer_lstm
 
 #bah = load_ShapeGraph()
 #data = bah.get_graph(use_fixed_split=False)

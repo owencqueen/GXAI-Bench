@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
 
-from graphxai.datasets import ShapeGraph
-from graphxai.gnn_models.node_classification.testing import GIN_3layer_basic, GIN_2layer, train, test
+from gxai_eval.datasets import ShapeGraph
+from gxai_eval.gnn_models.node_classification.testing import GIN_3layer_basic, GIN_2layer, train, test
 
 # Get a triangle:
 triangle = nx.Graph()

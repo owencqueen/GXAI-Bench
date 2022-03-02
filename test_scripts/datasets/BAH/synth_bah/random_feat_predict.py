@@ -3,11 +3,11 @@ import networkx as nx
 import numpy as np
 import matplotlib.pyplot as plt
 
-from graphxai.datasets.BA_shapes.ba_houses import BAHousesRandomGaussFeatures,\
+from gxai_eval.datasets.BA_shapes.ba_houses import BAHousesRandomGaussFeatures,\
     BAHousesRandomOneHotFeatures
-from graphxai.datasets import BAShapes
+from gxai_eval.datasets import BAShapes
 
-from graphxai.gnn_models.node_classification.testing import *
+from gxai_eval.gnn_models.node_classification.testing import *
 # Contains GCN 1-3 layers, GIN 1-3 layers, train and test
 
 latent_dim = 64

@@ -2,10 +2,10 @@ import random, time
 import torch
 import matplotlib.pyplot as plt
 
-from graphxai.explainers import SubgraphX
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, test, train 
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.utils import aggregate_explanations
+from gxai_eval.explainers import SubgraphX
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, test, train 
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.utils import aggregate_explanations
 
 # Load dataset:
 # Smaller graph is shown to work well with model accuracy, graph properties

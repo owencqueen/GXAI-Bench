@@ -4,10 +4,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import f1_score
 
-from graphxai.gnn_models.node_classification import BA_Houses, GCN, train, test
-from graphxai.datasets.feature import make_network_stats_feature
-from graphxai.explainers import GradExplainer
-from graphxai.visualization import visualize_edge_explanation
+from gxai_eval.gnn_models.node_classification import BA_Houses, GCN, train, test
+from gxai_eval.datasets.feature import make_network_stats_feature
+from gxai_eval.explainers import GradExplainer
+from gxai_eval.visualization import visualize_edge_explanation
 
 
 # Set random seeds

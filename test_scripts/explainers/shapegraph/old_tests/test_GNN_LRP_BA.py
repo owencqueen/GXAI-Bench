@@ -3,9 +3,9 @@ import torch
 import numpy as np
 import matplotlib.pyplot as plt
 
-from graphxai.explainers import GNN_LRP
-from graphxai.explainers.utils.visualizations import visualize_subgraph_explanation
-from graphxai.gnn_models.node_classification import BA_Houses, GCN, train, test
+from gxai_eval.explainers import GNN_LRP
+from gxai_eval.explainers.utils.visualizations import visualize_subgraph_explanation
+from gxai_eval.gnn_models.node_classification import BA_Houses, GCN, train, test
 from old.new_BAshapes import ShapeGraph
 
 

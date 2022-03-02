@@ -12,8 +12,8 @@ from typing import Union, Tuple
 from torch import Tensor
 from torch_geometric.typing import OptPairTensor, Adj, Size
 
-from graphxai.gnn_models.node_classification import BA_Houses, train, test
-from graphxai.explainers.graphmask import LagrangianOptimization, HardConcrete, \
+from gxai_eval.gnn_models.node_classification import BA_Houses, train, test
+from gxai_eval.explainers.graphmask import LagrangianOptimization, HardConcrete, \
     MultipleInputsLayernormLinear, Squeezer
 
 

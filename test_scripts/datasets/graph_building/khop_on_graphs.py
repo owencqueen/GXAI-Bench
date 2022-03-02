@@ -1,8 +1,8 @@
 import torch
 import networkx as nx
 
-from graphxai.utils import khop_subgraph_nx
-from graphxai.datasets import BAShapes
+from gxai_eval.utils import khop_subgraph_nx
+from gxai_eval.datasets import BAShapes
 
 class Hyperparameters:
     num_hops = 2

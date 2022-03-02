@@ -4,7 +4,7 @@ import pandas as pd
 import networkx as nx
 
 
-from graphxai.datasets.shape_graph import ShapeGraph
+from gxai_eval.datasets.shape_graph import ShapeGraph
 
 # Script counts the number of houses in the graph by using a subgraph isomorphism counter
 

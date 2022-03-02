@@ -5,7 +5,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.svm import SVC
 from sklearn.model_selection import GridSearchCV
 
-from graphxai.datasets import load_ShapeGraph, ShapeGraph
+from gxai_eval.datasets import load_ShapeGraph, ShapeGraph
 
 root_data = os.path.join('/Users/owenqueen/Desktop/data', 'ShapeGraph')
 

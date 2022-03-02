@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from graphxai.datasets.ba_houses import BAHousesRandomOneHotFeatures
+from gxai_eval.datasets.ba_houses import BAHousesRandomOneHotFeatures
 
 # def label_rule(self):
 #     def get_label(node_idx):

@@ -3,7 +3,7 @@ import torch
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 
-from graphxai.datasets import ShapeGraph
+from gxai_eval.datasets import ShapeGraph
 
 try:
     nclusters = int(sys.argv[1])

@@ -2,16 +2,16 @@ import sys
 import torch
 from torch_geometric.datasets import TUDataset
 
-from graphxai.explainers import IntegratedGradExplainer
+from gxai_eval.explainers import IntegratedGradExplainer
 #from graphxai.explainers.utils.visualizations import visualize_mol_explanation
-from graphxai.gnn_models.graph_classification import train, test
-from graphxai.gnn_models.graph_classification.gcn import GCN_2layer, GCN_3layer
-from graphxai.gnn_models.graph_classification.gin import GIN_2layer, GIN_3layer
-from graphxai.datasets import Mutagenicity
+from gxai_eval.gnn_models.graph_classification import train, test
+from gxai_eval.gnn_models.graph_classification.gcn import GCN_2layer, GCN_3layer
+from gxai_eval.gnn_models.graph_classification.gin import GIN_2layer, GIN_3layer
+from gxai_eval.datasets import Mutagenicity
 
 import matplotlib.pyplot as plt
 
-from graphxai.utils.exp_aggregation import aggregate_explanations
+from gxai_eval.utils.exp_aggregation import aggregate_explanations
 
 if len(sys.argv) > 1:
     seed = int(sys.argv[1])

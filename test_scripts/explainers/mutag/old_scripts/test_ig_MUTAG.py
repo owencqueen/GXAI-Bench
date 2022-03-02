@@ -3,9 +3,9 @@ import numpy as np
 import torch
 from torch_geometric.datasets import TUDataset
 
-from graphxai.explainers import IntegratedGradExplainer
-from graphxai.explainers.utils.visualizations import visualize_mol_explanation
-from graphxai.gnn_models.graph_classification import GCN, load_data, train, test
+from gxai_eval.explainers import IntegratedGradExplainer
+from gxai_eval.explainers.utils.visualizations import visualize_mol_explanation
+from gxai_eval.gnn_models.graph_classification import GCN, load_data, train, test
 
 import matplotlib.pyplot as plt
 

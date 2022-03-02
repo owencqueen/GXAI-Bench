@@ -14,11 +14,11 @@ import torch
 
 from torch_geometric.data import Data
 
-from graphxai.utils.perturb import rewire_edges
-from graphxai.gnn_models.node_classification import BA_Houses, GCN, train, test
-from graphxai.explainers import GNNExplainer, PGExplainer
+from gxai_eval.utils.perturb import rewire_edges
+from gxai_eval.gnn_models.node_classification import BA_Houses, GCN, train, test
+from gxai_eval.explainers import GNNExplainer, PGExplainer
 # from graphxai.utils.representation import extract_step
-from graphxai.visualization import visualize_edge_explanation
+from gxai_eval.visualization import visualize_edge_explanation
 
 # Set random seeds
 seed = 1

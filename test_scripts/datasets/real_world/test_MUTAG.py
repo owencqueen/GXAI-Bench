@@ -3,7 +3,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 
 from torch_geometric.utils import to_networkx
-from graphxai.datasets.real_world.MUTAG import MUTAG
+from gxai_eval.datasets.real_world.MUTAG import MUTAG
 
 mutag = MUTAG(root = '.')
 

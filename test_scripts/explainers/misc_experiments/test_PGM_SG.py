@@ -3,9 +3,9 @@ import torch
 import matplotlib.pyplot as plt
 from tqdm import trange
 
-from graphxai.explainers import PGMExplainer
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, test, train 
-from graphxai.datasets.shape_graph import ShapeGraph
+from gxai_eval.explainers import PGMExplainer
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, test, train 
+from gxai_eval.datasets.shape_graph import ShapeGraph
 
 # Load dataset:
 # Smaller graph is shown to work well with model accuracy, graph properties

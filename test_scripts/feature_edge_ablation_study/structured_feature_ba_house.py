@@ -6,10 +6,10 @@ from sklearn.metrics import f1_score
 from torch_geometric.data import Data
 from torch_geometric.utils.random import erdos_renyi_graph
 
-from graphxai.gnn_models.node_classification import BA_Houses, GCN, train, test
-from graphxai.datasets.feature import make_structured_feature
-from graphxai.explainers import GNNExplainer
-from graphxai.visualization import visualize_edge_explanation
+from gxai_eval.gnn_models.node_classification import BA_Houses, GCN, train, test
+from gxai_eval.datasets.feature import make_structured_feature
+from gxai_eval.explainers import GNNExplainer
+from gxai_eval.visualization import visualize_edge_explanation
 
 
 # Set random seeds

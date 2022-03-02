@@ -4,7 +4,7 @@ import argparse, sys; sys.path.append('../..')
 import random as rand
 import torch
 
-from graphxai.gnn_models.node_classification.testing import GIN_3layer_basic, GCN_3layer_basic, GSAGE_3layer
+from gxai_eval.gnn_models.node_classification.testing import GIN_3layer_basic, GCN_3layer_basic, GSAGE_3layer
 
 def get_model(name):
     if name.lower() == 'gcn':

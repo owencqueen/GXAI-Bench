@@ -1,7 +1,7 @@
 import torch
 import matplotlib.pyplot as plt
 
-from graphxai.datasets import ShapeGraph
+from gxai_eval.datasets import ShapeGraph
 
 arg_dict = {
     'num_subgraphs': 5,

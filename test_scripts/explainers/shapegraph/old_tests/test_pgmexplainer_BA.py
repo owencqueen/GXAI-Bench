@@ -1,9 +1,9 @@
 import random
 import torch
 
-from graphxai.explainers import PGMExplainer
-from graphxai.datasets.feature import make_network_stats_feature
-from graphxai.gnn_models.node_classification import BA_Houses, GCN, train, test
+from gxai_eval.explainers import PGMExplainer
+from gxai_eval.datasets.feature import make_network_stats_feature
+from gxai_eval.gnn_models.node_classification import BA_Houses, GCN, train, test
 
 
 # Set random seeds

@@ -2,11 +2,11 @@ import tqdm
 import argparse, sys, os
 import random as rand
 import torch
-from graphxai.explainers import *
-from graphxai.datasets  import load_ShapeGraph
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.utils.performance.load_exp import exp_exists
-from graphxai.gnn_models.node_classification.testing import GIN_3layer_basic
+from gxai_eval.explainers import *
+from gxai_eval.datasets  import load_ShapeGraph
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.utils.performance.load_exp import exp_exists
+from gxai_eval.gnn_models.node_classification.testing import GIN_3layer_basic
 
 my_base_graphxai = '/home/owq978/GraphXAI'
 sys.path.append(os.path.join(my_base_graphxai, 'formal'))

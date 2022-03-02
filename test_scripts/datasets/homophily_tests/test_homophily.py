@@ -6,8 +6,8 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 
 from torch_geometric.utils import sort_edge_index, to_undirected
-from graphxai.datasets import ShapeGraph
-from graphxai.datasets.load_synthetic import load_ShapeGraph
+from gxai_eval.datasets import ShapeGraph
+from gxai_eval.datasets.load_synthetic import load_ShapeGraph
 
 def if_edge_exists(edge_index, node1, node2):
     

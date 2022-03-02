@@ -1,6 +1,6 @@
 import torch
 import numpy as np
-from graphxai.datasets import Benzene
+from gxai_eval.datasets import Benzene
 
 dataset = Benzene(split_sizes = (0.7, 0.2, 0.1), seed = 1234)
 

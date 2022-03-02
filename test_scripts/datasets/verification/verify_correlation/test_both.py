@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import GridSearchCV
 
-from graphxai.gnn_models.node_classification.testing import train, test
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, GCN_4layer_basic, GAT_3layer_basic
-from graphxai.datasets import load_ShapeGraph, ShapeGraph
+from gxai_eval.gnn_models.node_classification.testing import train, test
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, GCN_4layer_basic, GAT_3layer_basic
+from gxai_eval.datasets import load_ShapeGraph, ShapeGraph
 
 root_data = os.path.join('/Users/owenqueen/Desktop/data', 'ShapeGraph')
 #SG = load_ShapeGraph(number=1, root = root_data)

@@ -8,8 +8,8 @@ from torch_geometric.nn import global_mean_pool, GCNConv
 import torch.nn.functional as F
 
 #from explainers.guidedbp import GuidedBP
-from graphxai.gnn_models.graph_classification import GIN, load_data, train, test
-from graphxai.explainers.utils.visualizations import *
+from gxai_eval.gnn_models.graph_classification import GIN, load_data, train, test
+from gxai_eval.explainers.utils.visualizations import *
 
 import matplotlib.pyplot as plt
 
@@ -46,7 +46,7 @@ model.eval()
 pred = model(mol.x, mol.edge_index, torch.zeros(1).type(torch.int64))
 pred_class = pred.argmax(dim=1).item()
 
-from graphxai.explainers.subgraphx import SubgraphX
+from gxai_eval.explainers.subgraphx import SubgraphX
 
 explainer = SubgraphX(model, reward_method = 'gnn_score')
 

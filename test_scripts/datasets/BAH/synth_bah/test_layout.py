@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from graphxai.datasets.ba_houses_with_synth import BAHouses
+from gxai_eval.datasets.ba_houses_with_synth import BAHouses
 
 bah = BAHouses(
     num_hops=2,

@@ -1,6 +1,6 @@
 import torch
 
-from graphxai.datasets import ShapeGraph
+from gxai_eval.datasets import ShapeGraph
 from sklearn.metrics import confusion_matrix
 
 SG = ShapeGraph(

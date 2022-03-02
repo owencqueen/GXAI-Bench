@@ -7,7 +7,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 plt.style.use('ggplot') # Use ggplot style
 
-from graphxai.datasets.load_synthetic import load_ShapeGraph
+from gxai_eval.datasets.load_synthetic import load_ShapeGraph
 
 SG = load_ShapeGraph(number = 1)
 

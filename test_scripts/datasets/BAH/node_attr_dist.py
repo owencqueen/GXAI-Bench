@@ -3,7 +3,7 @@ import torch
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from graphxai.datasets.ba_houses_generators import generate_BAHouses_graph_local, generate_BAHouses_graph_global
+from gxai_eval.datasets.ba_houses_generators import generate_BAHouses_graph_local, generate_BAHouses_graph_global
 
 
 G, x, y, _, = generate_BAHouses_graph_local(

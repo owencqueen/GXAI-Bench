@@ -6,15 +6,15 @@ import matplotlib.pyplot as plt
 
 from torch_geometric.utils import to_networkx
 
-from graphxai.explainers import CAM, GradCAM
+from gxai_eval.explainers import CAM, GradCAM
 #from graphxai.explainers.utils.visualizations import visualize_subgraph_explanation
-from graphxai.visualization.visualizations import visualize_subgraph_explanation
-from graphxai.visualization.explanation_vis import visualize_node_explanation
-from graphxai.gnn_models.node_classification import GCN, train, test
+from gxai_eval.visualization.visualizations import visualize_subgraph_explanation
+from gxai_eval.visualization.explanation_vis import visualize_node_explanation
+from gxai_eval.gnn_models.node_classification import GCN, train, test
 #from graphxai.datasets import BAShapes
-from graphxai.datasets.shape_graph import ShapeGraph
+from gxai_eval.datasets.shape_graph import ShapeGraph
 
-from graphxai.utils import to_networkx_conv
+from gxai_eval.utils import to_networkx_conv
 
 n = 300
 m = 2

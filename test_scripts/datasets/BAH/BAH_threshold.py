@@ -4,7 +4,7 @@ import torch.nn.functional as F
 import matplotlib.pyplot as plt
 from torch_geometric.nn import GCNConv, GINConv
 
-from graphxai.datasets.ba_houses import BAHouses as BAH
+from gxai_eval.datasets.ba_houses import BAHouses as BAH
 #from graphxai.gnn_models.node_classification import train, test
 
 class GCN_1layer(torch.nn.Module):

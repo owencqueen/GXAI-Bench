@@ -4,10 +4,10 @@ import argparse, sys; sys.path.append('../..')
 import random as rand
 import torch
 from metrics import *
-from graphxai.explainers import *
-from graphxai.datasets  import load_ShapeGraph
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.gnn_models.node_classification.testing import GIN_3layer_basic, GCN_3layer_basic, GSAGE_3layer
+from gxai_eval.explainers import *
+from gxai_eval.datasets  import load_ShapeGraph
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.gnn_models.node_classification.testing import GIN_3layer_basic, GCN_3layer_basic, GSAGE_3layer
 
 
 def get_exp_method(method, model, criterion, bah, node_idx, pred_class):

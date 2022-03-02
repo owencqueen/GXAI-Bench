@@ -2,11 +2,11 @@ import random
 import torch
 import matplotlib.pyplot as plt
 
-from graphxai.gnn_models.node_classification import BA_Houses as BAH
-from graphxai.gnn_models.node_classification import GCN
-from graphxai.explainers.utils.visualizations import *
-from graphxai.explainers.utils import whole_graph_mask_to_subgraph
-from graphxai.explainers.subgraphx import SubgraphX
+from gxai_eval.gnn_models.node_classification import BA_Houses as BAH
+from gxai_eval.gnn_models.node_classification import GCN
+from gxai_eval.explainers.utils.visualizations import *
+from gxai_eval.explainers.utils import whole_graph_mask_to_subgraph
+from gxai_eval.explainers.subgraphx import SubgraphX
 
 def get_data(n, m, num_houses):
     bah = BAH(n, m)

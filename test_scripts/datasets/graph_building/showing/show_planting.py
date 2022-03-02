@@ -2,7 +2,7 @@ import random
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from graphxai.utils import khop_subgraph_nx
+from gxai_eval.utils import khop_subgraph_nx
 
 house = nx.house_graph()
 

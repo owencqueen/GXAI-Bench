@@ -3,7 +3,7 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from graphxai.datasets import ShapeGraph, load_ShapeGraph
+from gxai_eval.datasets import ShapeGraph, load_ShapeGraph
 from test_homophily import homophily_test
 
 my_data_root = '/Users/owenqueen/Desktop/HMS_research/graphxai_project/GraphXAI/data/ShapeGraph/new_unzipped'

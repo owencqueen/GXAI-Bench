@@ -3,7 +3,7 @@ import torch
 import networkx as nx
 import matplotlib.pyplot as plt
 
-from graphxai.datasets.shape_graph import ShapeGraph
+from gxai_eval.datasets.shape_graph import ShapeGraph
 
 def parse_args():
     arg_dict = {}

@@ -4,9 +4,9 @@ import torch
 from torch_geometric.datasets import TUDataset
 from torch_geometric.utils import remove_self_loops
 
-from graphxai.explainers import GNN_LRP
-from graphxai.explainers.utils.visualizations import visualize_mol_explanation
-from graphxai.gnn_models.graph_classification import GCN, load_data, train, test
+from gxai_eval.explainers import GNN_LRP
+from gxai_eval.explainers.utils.visualizations import visualize_mol_explanation
+from gxai_eval.gnn_models.graph_classification import GCN, load_data, train, test
 
 import matplotlib.pyplot as plt
 
@@ -40,7 +40,7 @@ pred_class = pred.argmax(dim=1).item()
 print('GROUND TRUTH LABEL: \t {}'.format(mol.y.item()))
 print('PREDICTED LABEL   : \t {}'.format(pred.argmax(dim=1).item()))
 
-from graphxai.explainers.gnn_lrp import GNN_LRP
+from gxai_eval.explainers.gnn_lrp import GNN_LRP
 
 gnn_lrp = GNN_LRP(model)
 exp = gnn_lrp.get_explanation_graph(

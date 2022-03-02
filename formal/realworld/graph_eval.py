@@ -6,10 +6,10 @@ from tqdm import tqdm
 
 from utils import get_model, get_exp_method, get_dataset
 
-from graphxai.datasets import Benzene
-from graphxai.explainers import PGExplainer
-from graphxai.utils.performance.load_exp import exp_exists_graph
-from graphxai.metrics.metrics_graph import graph_exp_acc_graph, graph_exp_faith_graph
+from gxai_eval.datasets import Benzene
+from gxai_eval.explainers import PGExplainer
+from gxai_eval.utils.performance.load_exp import exp_exists_graph
+from gxai_eval.metrics.metrics_graph import graph_exp_acc_graph, graph_exp_faith_graph
 
 my_base_graphxai = '/home/owq978/GraphXAI/formal/realworld'
 

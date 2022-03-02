@@ -3,8 +3,8 @@ import numpy as np
 import networkx as nx
 import matplotlib.pyplot as plt
 from tqdm import trange
-from graphxai.datasets import Mutagenicity
-from graphxai.utils import aggregate_explanations
+from gxai_eval.datasets import Mutagenicity
+from gxai_eval.utils import aggregate_explanations
 
 dataset = Mutagenicity(root = '../../../explainers/mutagenicity/data', test_debug=True)
 

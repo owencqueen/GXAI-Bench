@@ -3,9 +3,9 @@ import random as rand
 import torch
 import argparse
 import numpy as np
-from graphxai.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, test, train, val, GSAGE_3layer, GAT_3layer_basic, JKNet_3layer
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.datasets  import load_ShapeGraph
+from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, GIN_3layer_basic, test, train, val, GSAGE_3layer, GAT_3layer_basic, JKNet_3layer
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.datasets  import load_ShapeGraph
 
 
 parser = argparse.ArgumentParser()

@@ -1,5 +1,5 @@
 from torch_geometric.utils.subgraph import subgraph
-from graphxai.datasets import ShapeGraph
+from gxai_eval.datasets import ShapeGraph
 
 SG = ShapeGraph(model_layers = 3, prob_connection = 0.1, num_subgraphs = 30, subgraph_size = 13)
 data = SG.get_graph()

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FormatStrFormatter
 
-from graphxai.datasets import ShapeGraph
+from gxai_eval.datasets import ShapeGraph
 from test_homophily import homophily_test
 
 def build_SG(HF):

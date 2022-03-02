@@ -5,7 +5,7 @@ import torch.nn.functional as F
 
 from test_homophily import homophily_test
 
-from graphxai.datasets import ShapeGraph
+from gxai_eval.datasets import ShapeGraph
 
 def new_homophily_test(sg, batch_size):
 

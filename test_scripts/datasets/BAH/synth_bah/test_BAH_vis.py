@@ -1,5 +1,5 @@
 import sys
-from graphxai.datasets import BAShapes
+from gxai_eval.datasets import BAShapes
 
 assert len(sys.argv) == 4, 'usage: python3 test_BAH_vis.py <shape_insert_strategy> <labeling_method> <feature_method>'
 

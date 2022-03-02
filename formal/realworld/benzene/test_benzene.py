@@ -2,12 +2,12 @@ import os, sys; sys.path.append('..')
 import torch
 from torch_geometric.datasets import TUDataset
 
-from graphxai.explainers import IntegratedGradExplainer
+from gxai_eval.explainers import IntegratedGradExplainer
 #from graphxai.explainers.utils.visualizations import visualize_mol_explanation
-from graphxai.gnn_models.graph_classification import train, test
-from graphxai.gnn_models.graph_classification.gcn import GCN_2layer, GCN_3layer
-from graphxai.gnn_models.graph_classification.gin import GIN_2layer, GIN_3layer
-from graphxai.datasets import Benzene
+from gxai_eval.gnn_models.graph_classification import train, test
+from gxai_eval.gnn_models.graph_classification.gcn import GCN_2layer, GCN_3layer
+from gxai_eval.gnn_models.graph_classification.gin import GIN_2layer, GIN_3layer
+from gxai_eval.datasets import Benzene
 
 from utils import get_dataset
 

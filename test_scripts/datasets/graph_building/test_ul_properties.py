@@ -7,11 +7,11 @@ import matplotlib.pyplot as plt
 from torch_geometric.utils import from_networkx
 from sklearn.model_selection import train_test_split
 
-from graphxai.datasets.utils.bound_graph import build_bound_graph
-from graphxai.datasets.shape_graph import ShapeGraph
-from graphxai.gnn_models.node_classification.testing import *
+from gxai_eval.datasets.utils.bound_graph import build_bound_graph
+from gxai_eval.datasets.shape_graph import ShapeGraph
+from gxai_eval.gnn_models.node_classification.testing import *
 
-from graphxai.utils import khop_subgraph_nx
+from gxai_eval.utils import khop_subgraph_nx
 
 
 # Search parameters:

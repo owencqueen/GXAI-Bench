@@ -1,5 +1,5 @@
 
-from graphxai.datasets import load_ShapeGraph
+from gxai_eval.datasets import load_ShapeGraph
 
 Owen_root = '/Users/owenqueen/Desktop/HMS_research/graphxai_project/GraphXAI/data/ShapeGraph/unzipped'
 

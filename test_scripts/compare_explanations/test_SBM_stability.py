@@ -11,9 +11,9 @@ from IPython.display import SVG
 from sknetwork.visualization import svg_graph
 
 from old import sbm_with_singletons
-from graphxai.gnn_models.node_classification import GCN, train, test
-from graphxai.utils.representation import extract_step
-from graphxai.explainers import GNNExplainer
+from gxai_eval.gnn_models.node_classification import GCN, train, test
+from gxai_eval.utils.representation import extract_step
+from gxai_eval.explainers import GNNExplainer
 
 
 block_sizes = [40, 45, 50]

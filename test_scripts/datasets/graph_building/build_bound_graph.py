@@ -1,7 +1,7 @@
 import sys
 import networkx as nx
 import matplotlib.pyplot as plt
-from graphxai.datasets.utils.bound_graph import build_bound_graph
+from gxai_eval.datasets.utils.bound_graph import build_bound_graph
 
 def parse_argv():
 
