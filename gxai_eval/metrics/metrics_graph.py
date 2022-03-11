@@ -22,7 +22,6 @@ from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, G
 from gxai_eval.gnn_models.node_classification import GCN, train, test
 from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, train, test
 
-from gxai_eval.datasets.shape_graph import ShapeGraph
 from gxai_eval.datasets.dataset import GraphDataset
 from gxai_eval.utils import to_networkx_conv, Explanation, distance
 from gxai_eval.utils.perturb import rewire_edges, perturb_node_features
@@ -76,7 +75,7 @@ def graph_exp_acc_graph(gt_exp: List[Explanation], generated_exp: Explanation, n
                 FN = len(FNs)
                 JAC_feat.append(TP / (TP + FP + FN + EPS))
 
-    JAC_feat = max(JAC_feat) if len(JAC_feat) > 0 else None
+        JAC_feat = max(JAC_feat) if len(JAC_feat) > 0 else None
 
     if generated_exp.node_imp is not None:
         JAC_node = []

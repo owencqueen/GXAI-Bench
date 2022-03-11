@@ -3,7 +3,7 @@ from torch import Tensor
 from functools import partial
 import torch.nn.functional as F
 from typing import Callable, Optional, Tuple
-from torch_geometric.utils import k_hop_subgraph
+from torch_geometric.utils import k_hop_subgraph, remove_self_loops
 from torch_geometric.utils.num_nodes import maybe_num_nodes
 from torch_geometric.nn import MessagePassing
 from torch_geometric.data import Data
@@ -266,8 +266,7 @@ class SubgraphX(_BaseExplainer):
             node_imp = node_mask.float(),
             edge_imp = edge_mask.float()
         )
-        # exp.node_imp = node_mask
-        # exp.edge_imp = edge_mask
+
         exp.set_whole_graph(Data(x=x, edge_index=edge_index))
 
         #return {'feature_imp': None, 'node_imp': node_mask, 'edge_imp': edge_mask}

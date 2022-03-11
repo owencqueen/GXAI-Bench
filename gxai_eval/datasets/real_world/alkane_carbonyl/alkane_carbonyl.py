@@ -1,4 +1,5 @@
-import os
+import os, random
+from gxai_eval.utils import explanation
 import torch
 
 from gxai_eval.datasets.real_world.extract_google_datasets import load_graphs 
@@ -32,5 +33,23 @@ class AlkaneCarbonyl(GraphDataset):
 
         self.graphs, self.explanations, self.zinc_ids = \
             load_graphs(data_path, os.path.join(data_path, fc_smiles_df))
+
+        # Downsample because of extreme imbalance:
+        yvals = [self.graphs[i].y for i in range(len(self.graphs))]
+
+        zero_bin = []
+        one_bin = []
+
+        for i in range(len(self.graphs)):
+            if self.graphs[i].y == 0:
+                zero_bin.append(i)
+            else:
+                one_bin.append(i)
+
+        keep_inds = random.sample(zero_bin, k = 2 * len(one_bin))
+
+        self.graphs = [self.graphs[i] for i in (keep_inds + one_bin)]
+        self.explanations = [self.explanations[i] for i in (keep_inds + one_bin)]
+        self.zinc_ids = [self.zinc_ids[i] for i in (keep_inds + one_bin)]
 
         super().__init__(name = 'AklaneCarbonyl', seed = seed, split_sizes = split_sizes, device = device)

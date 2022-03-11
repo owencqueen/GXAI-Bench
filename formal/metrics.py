@@ -22,7 +22,7 @@ from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, G
 from gxai_eval.gnn_models.node_classification import GCN, train, test
 from gxai_eval.gnn_models.node_classification.testing import GCN_3layer_basic, train, test
 
-from gxai_eval.datasets.shape_graph import ShapeGraph
+#from gxai_eval.datasets.shape_graph import ShapeGraph
 from gxai_eval.utils import to_networkx_conv, Explanation, distance
 from gxai_eval.utils.perturb import rewire_edges, perturb_node_features
 
@@ -125,7 +125,7 @@ def graph_exp_acc(gt_exp: List[Explanation], generated_exp: Explanation, node_th
 
 
 def graph_exp_faith(generated_exp: Explanation, 
-        shape_graph: ShapeGraph, 
+        shape_graph, 
         model, 
         sens_idx: List[int]= [], 
         top_k: float = 0.25) -> float:
@@ -162,7 +162,8 @@ def graph_exp_faith(generated_exp: Explanation,
         rem_features = torch.Tensor(
             [i for i in range(X.shape[1]) if i not in top_k_features]).long()
 
-        pert_x[generated_exp.node_idx, rem_features] = perturb_node_features(x=pert_x, node_idx=generated_exp.node_idx, pert_feat=rem_features, bin_dims=sens_idx, device = device)
+        pert_x[generated_exp.node_idx, rem_features] = perturb_node_features(x=pert_x, node_idx=generated_exp.node_idx, pert_feat=rem_features, device = device)
+        #pert_x[generated_exp.node_idx, rem_features] = perturb_node_features(x=pert_x, node_idx=generated_exp.node_idx, pert_feat=rem_features, bin_dims=sens_idx, device = device)
 
         pert_vec = model(pert_x.to(device), EIDX)[generated_exp.node_idx]
         pert_softmax = F.softmax(pert_vec, dim=-1)
@@ -312,7 +313,7 @@ def intersection(lst1, lst2):
 
 
 def graph_exp_stability(generated_exp: Explanation, explainer, 
-        shape_graph: ShapeGraph, node_id, model, delta, sens_idx, 
+        shape_graph, node_id, model, delta, sens_idx, 
         top_k=0.25, rep='softmax', device = "cpu",
         G = None, data = None, num_run = 25) -> float:
     GES_feat = []
@@ -418,7 +419,7 @@ def graph_exp_stability(generated_exp: Explanation, explainer,
     return [max(GES_feat) if len(GES_feat)>0 else None, max(GES_node) if len(GES_node)>0 else None, max(GES_edge) if len(GES_edge)>0 else None]
 
 # check_delta(x, edge_index, model, rep, pert_x, pert_edge_index, n_id, delta, dist_norm=2)
-def graph_exp_cf_fairness(generated_exp: Explanation, gnnexpr, shape_graph: ShapeGraph, model, node_id, delta, sens_idx, top_k=0.25, rep='softmax', device = 'cpu', data = None) -> float:
+def graph_exp_cf_fairness(generated_exp: Explanation, gnnexpr, shape_graph, model, node_id, delta, sens_idx, top_k=0.25, rep='softmax', device = 'cpu', data = None) -> float:
     GECF_feat = None
     GECF_node = None
     GECF_edge = None
@@ -511,7 +512,7 @@ def stat_parity(org, pred, sens):
 # check_delta(x, edge_index, model, rep, pert_x, pert_edge_index, n_id, delta, dist_norm=2)
 
 
-def graph_exp_group_fairness(generated_exp: Explanation, shape_graph: ShapeGraph, 
+def graph_exp_group_fairness(generated_exp: Explanation, shape_graph, 
         node_id, model, delta, sens_idx, top_k=0.25, rep='softmax', device = 'cpu',
         G = None, data = None, num_samples = 10) -> float:
 

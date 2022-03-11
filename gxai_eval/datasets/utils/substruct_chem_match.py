@@ -23,21 +23,33 @@ from torch_geometric.utils.convert import to_networkx
 # 12	Li
 # 13	Ca
 
-# C_vec = torch.zeros(7); C_vec[0] = 1
-# N_vec = torch.zeros(7); N_vec[1] = 1
-# O_vec = torch.zeros(7); O_vec[2] = 1 
+class MUTAGVectors:
+    C_vec = torch.zeros(7); C_vec[0] = 1
+    N_vec = torch.zeros(7); N_vec[1] = 1
+    O_vec = torch.zeros(7); O_vec[2] = 1 
 
+class GoogleVectors:
+    C_vec = torch.zeros(14); C_vec[0] = 1
+    O_vec = torch.zeros(14); O_vec[1] = 1 
+    Cl_vec = torch.zeros(14); Cl_vec[2] = 1
+    H_vec = torch.zeros(14); H_vec[3] = 1
+    N_vec = torch.zeros(14); N_vec[4] = 1
+    F_vec = torch.zeros(14); F_vec[5] = 1
+    Br_vec = torch.zeros(14); Br_vec[6] = 1
+    I_vec = torch.zeros(14); I_vec[9] = 1
 
-C_vec = torch.zeros(14); C_vec[0] = 1
-O_vec = torch.zeros(14); O_vec[1] = 1 
-Cl_vec = torch.zeros(14); Cl_vec[2] = 1
-H_vec = torch.zeros(14); H_vec[3] = 1
-N_vec = torch.zeros(14); N_vec[4] = 1
-F_vec = torch.zeros(14); F_vec[5] = 1
-Br_vec = torch.zeros(14); Br_vec[6] = 1
-I_vec = torch.zeros(14); I_vec[9] = 1
+google_vecs = GoogleVectors()
+mutag_vecs = MUTAGVectors()
 
-def make_NO2():
+def make_NO2(google = True):
+
+    if google:
+        N_vec = google_vecs.N_vec
+        O_vec = google_vecs.O_vec
+    else:
+        N_vec = mutag_vecs.N_vec
+        O_vec = mutag_vecs.O_vec
+
     no2 = nx.Graph()
 
     nodes = [0, 1, 2]
@@ -55,29 +67,42 @@ def make_NO2():
 
     return no2
 
-def make_NH2():
+def make_NH2(google = True):
     nh2 = nx.Graph()
 
-    nodes = [0, 1, 2]
-    atom = ['N', 'H', 'H']
-    vecs = [N_vec, H_vec, H_vec]
+    if google:
+        N_vec = google_vecs.N_vec
+        H_vec = google_vecs.H_vec
 
-    node_data = [(n, {'atom': a, 'x': v.clone()}) for n, a, v in zip(nodes, atom, vecs)]
+        nodes = [0, 1, 2]
+        atom = ['N', 'H', 'H']
+        vecs = [N_vec, H_vec, H_vec]
 
-    nh2.add_nodes_from(node_data)
+        node_data = [(n, {'atom': a, 'x': v.clone()}) for n, a, v in zip(nodes, atom, vecs)]
 
-    # Edges like: H -- N -- H
-    edges = [(0, 1), (0, 2)]
+        nh2.add_nodes_from(node_data)
 
-    nh2.add_edges_from(edges)
+        # Edges like: H -- N -- H
+        edges = [(0, 1), (0, 2)]
+
+        nh2.add_edges_from(edges)
+
+    else:
+        N_vec = mutag_vecs.N_vec
+        
+
+
+
 
     return nh2
 
 MUTAG_NO2 = make_NO2()
 MUTAG_NH2 = make_NH2()
 
-def match_NH2(G: nx.Graph, node: int):
+def match_NH2(G: nx.Graph, node: int, google = True):
     '''Determines if a node in a Networkx graph is a match for NH2 group'''
+
+    N_vec = google_vecs.N_vec if google else mutag_vecs.N_vec
 
     if G.degree[node] != 1: # If degree not 1, isn't NH2
         return None
@@ -96,7 +121,14 @@ def match_NH2(G: nx.Graph, node: int):
 
     # return None
 
-def match_substruct(G: nx.Graph, substructure: nx.Graph = MUTAG_NO2):
+def match_substruct(G: nx.Graph, substructure: nx.Graph = MUTAG_NO2, google = True):
+
+    if google:
+        N_vec = google_vecs.N_vec
+        O_vec = google_vecs.O_vec
+    else:
+        N_vec = mutag_vecs.N_vec
+        O_vec = mutag_vecs.O_vec
 
 
     # Isomorphic match graph structure:
